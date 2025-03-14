@@ -1,56 +1,71 @@
-# AIR QUALITY DYNAMICS
+# Air Pollution Decision Tree Classifier
 
-## Description
-This repository will be used to analyze the different levels of air pollution in different countries and later on, if hospital data is available for repository diseases led from air pollution, i will identify patterns and interesting relationships between the level of air pollution and repository diseases.  
+## Overview
+This project implements a Decision Tree classifier to predict air pollution levels based on various environmental factors. The model is trained using real-world air pollution datasets and aims to assist in understanding air quality patterns.
 
-# Table of Contents
-1. [Installation](#installation)
-1. [Features](#features)
+## Features
+- Preprocesses air pollution data.
+- Trains a Decision Tree classifier.
+- Evaluates the model's performance using accuracy metrics.
+- Provides predictions on air pollution levels.
 
+## Installation
+To run this project, follow these steps:
 
-## Installation 
-1. Virtual environment setup
-``python3 -m venv directory name``
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/Air_Pollution_Decision_Tree.git
+   ```
 
+2. Navigate to the project directory:
+   ```bash
+   cd Air_Pollution_Decision_Tree
+   ```
 
-**Requirements**
-- python
-- pandas  
-- matplotlib.pyplot
-- streamlit 
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Features   
-### Columns/Attributes of the data:   
+## Usage
+1. Ensure you have the dataset in the `data/` directory.
+2. Run the script:
+   ```bash
+   python scripts/air_pollution_decision.py
+   ```
+3. The model will train and display evaluation metrics.
 
-| Column | Data Type |
-| ---- | ---- |
-| country_name | object |
-| city_name | object  |
-| aqi_value |  integer |
-| aqi_category | object  |
-| co_aqi_value | integer  |
-| co_aqi_category | object |
-| ozone_aqi_value | integer |
-| ozone_aqi_category | object  |
-| no2_aqi_value | integer  |
-| no2_aqi_category | object |
-| pm2.5_aqi_value | integer |
-| pm2.5_aqi_category | object  |
+## Project Structure
+```
+/Air_Pollution_Decision_Tree
+│── data/
+│   ├── global_air_pollution_data.csv
+│── models/
+│   ├── air_quality_index_prediction_model.sav
+│── scripts/
+│   ├── air_pollution_decision.py
+│── README.md
+│── requirements.txt
+│── LICENSE
+```
 
+## Dataset
+The dataset consists of air pollution metrics such as:
+- PM2.5
+- PM10
+- NO2
+- CO
+- SO2
+- Temperature
+- Humidity
 
-1. Country_name:  
-Provides the name of the country.  
-2. city_name:  
-name of the city in the given country.
-3.  Air Quality Index:   
-Air Quality Index(AQI) is a numerical value indication how clean or polluted the air is for the given location. AQI ranges for 0 to 500. Higer AQI values indicate polluted air which is poses a significant risk to health. 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**AQI Categories:**   
-| Category | Range | 
-| ----- | ----- |
-| Good | below 50|
-| Moderate | 51 - 100 |
-| Unhealthy  (sensitive groups such as children, eldery) | 101 - 150 |
-| Unhealthy | 151 - 200 |
-| Very UnHealthy | 201 - 300 |
-| Hazardous | above 300 |
+## Author
+[Allan Otieno Akumu](https://github.com/AllanOtieno254)
+
+## Acknowledgments
+- Open-source air quality datasets.
+- Python libraries such as Scikit-learn and Pandas.
+
